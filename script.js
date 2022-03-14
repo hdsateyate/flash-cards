@@ -31,7 +31,7 @@ const cardsEl = [];
 //       answer: 'thisIsAVariable'
 //    }
 // ];
-const cardsData = getCardsData();
+let cardsData = getCardsData();
 
 
 // Get cards from local storage
@@ -143,4 +143,10 @@ addCardBtn.addEventListener('click', () => {
       cardsData.push(newCard);
       setCardsData(cardsData);
    }
+})
+
+// clear all cards
+clearBtn.addEventListener('click', () => {
+   cardsData = [];
+   setCardsData(cardsData);
 })
